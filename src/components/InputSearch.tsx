@@ -24,7 +24,7 @@ function InputSearch() {
 	const listStyle: React.CSSProperties = {
 		position: "absolute",
 		top: "100%",
-		left: "50%",
+		left: "0%",
 		zIndex: 100,
 		display: isVisible ? "block" : "none", // conditionnel par rapport au usestate !
 	};
@@ -62,20 +62,24 @@ function InputSearch() {
 
 	return (
 		//htmlFor à la place de for, parce qu'on est en JSX et for est un terme JS.... comme class --> className
-		<div className="relative">
-			<label htmlFor="character">Sélectionnez votre personnage : </label>
+		<div className="input-container">
+			<label htmlFor="character" className="character-search">
+				Sélectionnez votre personnage :{" "}
+			</label>
 			<input
 				id="character1"
 				name="character"
+				className="character-search"
 				placeholder="Personnage 1"
 				value={inputValue}
 				onChange={(e) => onChange(e)}
 				onBlur={() => setIsVisible(false)}
 			></input>
-			<ul style={listStyle}>
+			<ul style={listStyle} className="characters-list">
 				{filteredCharacters.map((character) => (
 					<li
 						key={character.name}
+						className="selected-character"
 						onMouseDown={() => handleSelect(character.name)}
 						onKeyDown={(e) => e.key === "Enter" && handleSelect(character.name)}
 					>

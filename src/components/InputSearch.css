@@ -1,3 +1,50 @@
-.relative {
+.input-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	gap: 15px;
 	position: relative;
+	width: 20vw;
+	margin: 0;
+}
+
+.character-search {
+	color: rgb(114, 181, 252);
+	font-weight: bold;
+	text-align: left;
+	vertical-align: center; /* ??*/
+	background-color: rgb(45, 44, 44);
+	box-shadow: 0px 0px 15px rgb(114, 181, 252);
+	border-radius: 15%;
+	width: 80%;
+	font-size: 1rem;
+	padding: 10px;
+	margin: 0;
+}
+.characters-list {
+	/*en faire un affichage limité en hauteur avec ascenseur*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	color: rgb(114, 181, 252);
+	font-weight: bold;
+	text-align: left;
+	vertical-align: center; /* ??*/
+	gap: 5px; /* marhe pas, les li sont affichés suelment on change, il faut un style dynamique dans tsx ?*/
+	background-color: rgb(45, 44, 44);
+	box-shadow: 0px 0px 15px rgb(114, 181, 252);
+	border-radius: 5%;
+	width: 80%;
+	font-size: 1rem;
+	padding: 10px;
+	margin: 0;
+}
+
+.selected-character {
+	list-style-type: none;
+}
+.selected-character :hover {
+	cursor: pointer; /* marche pas : meme raison ?*/
 }

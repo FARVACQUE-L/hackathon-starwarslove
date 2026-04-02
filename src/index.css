@@ -1,4 +1,8 @@
-:root {
+body {
+	background-color: rgb(31, 30, 30);
+}
+
+/*:root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -109,3 +113,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+ */
