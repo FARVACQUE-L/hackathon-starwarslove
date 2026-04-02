@@ -7,6 +7,8 @@ export type StarWarsCharacter = {
 	species?: string;
 	homeworld?: string;
 	gender?: string;
+	eyeColor?: string;
+	height?: number | string;
 	affiliations?: string[];
 	affiliation?: string;
 };
@@ -50,6 +52,12 @@ function CardPerso({ character }: Props) {
 				</p>
 				<p>
 					<strong>Planète:</strong> {character.homeworld || "Inconnu"}
+				</p>
+				<p>
+					<strong>Couleur des yeux:</strong> {character.eyeColor || "Inconnu"}
+				</p>
+				<p>
+					<strong>Taille:</strong> {character.height || "Inconnu"}
 				</p>
 				<p>
 					<strong>Affiliation:</strong> {affiliation}
