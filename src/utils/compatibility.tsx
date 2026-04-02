@@ -1,4 +1,4 @@
-import Character from "../types/Character";
+import type Character from "../types/Character";
 
 const affiliationLight = [
 	// Jedi & République
@@ -185,7 +185,7 @@ function getSide(character1: Character, character2: Character) {
 	return { side1, side2 };
 }
 
-function Compatibility(character1: Character, character2: Character) {
+function compatibility(character1: Character, character2: Character) {
 	let result = 50;
 	const { side1, side2 } = getSide(character1, character2);
 
@@ -205,7 +205,11 @@ function Compatibility(character1: Character, character2: Character) {
 		result += -5;
 	}
 
-	if (character1.homeworld === character2.homeworld) {
+	if (
+		character1.homeworld &&
+		character2.homeworld &&
+		character1.homeworld === character2.homeworld
+	) {
 		result += 15;
 	} else {
 		result += 5;
@@ -215,22 +219,32 @@ function Compatibility(character1: Character, character2: Character) {
 		result += 30;
 	}
 
-	if (character1.gender === "male" && character2.gender === "female") {
-		if (character1.height > character2.height) {
-			result += 10;
-		} else {
-			result += -10;
-		}
-	} else if (character1.gender === "female" && character2.gender === "male") {
-		if (character1.height > character2.height) {
-			result += -10;
-		} else {
-			result += 10;
+	if (character1.height && character2.height) {
+		if (character1.gender === "male" && character2.gender === "female") {
+			if (character1.height > character2.height) {
+				result += 10;
+			} else {
+				result += -10;
+			}
+		} else if (character1.gender === "female" && character2.gender === "male") {
+			if (character1.height > character2.height) {
+				result += -10;
+			} else {
+				result += 10;
+			}
 		}
 	}
-	if (character1.died !== null && character2.died !== null) {
+	if (
+		character1.died !== undefined &&
+		character1.died !== null &&
+		character2.died !== undefined &&
+		character2.died !== null
+	) {
 		result += -5;
-	} else if (character1.died !== null || character2.died !== null) {
+	} else if (
+		(character1.died !== undefined && character1.died !== null) ||
+		(character2.died !== undefined && character2.died !== null)
+	) {
 		result += -50;
 	} else {
 		result += 10;
@@ -250,4 +264,5 @@ function Compatibility(character1: Character, character2: Character) {
 
 	return result;
 }
-console.log(Compatibility());
+
+export default compatibility;
