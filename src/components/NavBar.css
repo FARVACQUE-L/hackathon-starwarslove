@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .forTheScale {
+        transform: scaleX(-1);
+    }
+
+    img {
+        width: 7rem;
+        height: auto;
+
+        &:hover {
+            animation : rotateChicken 1s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes rotateChicken {
+    0% { transform: rotate(8deg); }
+    25% { transform: rotate(-6deg); }
+    50% { transform: rotate(4deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(8deg); }
+}
