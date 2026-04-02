@@ -19,15 +19,15 @@
 .personnage-title {
 	margin-top: 0;
 	margin-bottom: 60px;
-	color: #eaf8ff;
+	color: #ffe9ee;
 	font-family: "Star Wars", sans-serif;
 	font-size: 60px;
 	line-height: 1.25;
-	-webkit-text-stroke: 1.6px #00b8ff;
+	-webkit-text-stroke: 1.6px #ff0037;
 	text-shadow:
-		0 0 6px rgba(0, 184, 255, 0.95),
-		0 0 14px rgba(0, 184, 255, 0.8),
-		0 0 28px rgba(0, 118, 255, 0.6);
+		0 0 6px rgba(255, 0, 55, 0.95),
+		0 0 14px rgba(255, 0, 55, 0.8),
+		0 0 28px rgba(255, 0, 55, 0.6);
 }
 
 .personnage-container p {
