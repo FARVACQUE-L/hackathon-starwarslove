@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 15rem;
+    background: url("../assets/PadmeAnakin.png") center;
+    background-size: cover;
+}
