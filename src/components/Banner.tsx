@@ -1,4 +1,4 @@
-import "./Banner.css"
+import "./NavBar_Banner_Footer.css"
 
 function Banner() {
     const bannerText = ["01010000 01101111 01110101 01101100 01100101 01110100", "Célibataire tu seras !", "Matche tu dois !", "Solitude, quitter tu vas !", "Compatible à 100% tu seras !", "Que la compatibilité soit avec toi !"]

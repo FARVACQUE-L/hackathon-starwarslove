@@ -18,6 +18,37 @@ nav {
     }
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 15rem;
+    background: url("../assets/PadmeAnakin.png") center;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    .forTheScale {
+        transform: scaleX(-1);
+    }
+
+    img {
+        width: 3rem;
+        height: auto;
+
+        &:hover {
+            animation : rotateChicken 1s ease-in-out infinite;
+        }
+    }
+}
+
+
 @keyframes rotateChicken {
     0% { transform: rotate(8deg); }
     25% { transform: rotate(-6deg); }

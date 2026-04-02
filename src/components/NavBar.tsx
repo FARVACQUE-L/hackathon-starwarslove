@@ -1,7 +1,7 @@
 import LogoBlue from "../assets/logoChickenBlue.png"
 import LogoRed from "../assets/logoChickenRed.png"
 
-import "./NavBar.css"
+import "./NavBar_Banner_Footer.css"
 
 function NavBar() {
     return (
