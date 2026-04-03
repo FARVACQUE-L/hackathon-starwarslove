@@ -30,47 +30,49 @@ function App() {
 		formerAffiliations: [],
 	};
 	const cha2 = {
-		id: 14,
-		name: "Han Solo",
-		height: 1.8,
-		mass: 80,
+		id: 4,
+		name: "Darth Vader",
+		height: 2.03,
+		mass: 120,
 		gender: "male",
-		homeworld: "corellia",
-		wiki: "http://starwars.wikia.com/wiki/Han_Solo",
+		homeworld: "tatooine",
+		wiki: "http://starwars.wikia.com/wiki/Anakin_Skywalker",
 		image:
-			"https://vignette.wikia.nocookie.net/starwars/images/e/e2/TFAHanSolo.png",
-		born: -29,
-		bornLocation: "corellia",
-		died: 34,
-		diedLocation: "starkiller base",
+			"https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg",
+		born: -41,
+		died: 4,
+		diedLocation: "death star ii, endor system",
 		species: "human",
-		hairColor: "brown, later gray",
-		eyeColor: "hazel",
-		skinColor: "light",
+		hairColor: "blond",
+		eyeColor: "blue, yellow (dark side)",
+		skinColor: "light, later pale",
+		cybernetics:
+			"Cybernetic right arm; later prosthetic arms and legs, and a life-support system",
 		affiliations: [
+			"501st Legion",
+			"Sith",
 			"Galactic Empire",
-			"Jabba Desilijic Tiure's criminal empire",
-			"Alliance to Restore the Republic",
-			"Leia Organa's team",
-			"Endor strike team",
-			"Kingdom of Han",
-			"Bright Tree tribe",
-			"New Republic",
-			"New Republic Pilots Commission",
-			"Han Solo's shipping company",
-			"Resistance",
+			"Imperial High Command",
 		],
-		formerAffiliations: [],
+		masters: [
+			"Qui-Gon Jinn (informal Jedi Master)",
+			"Obi-Wan Kenobi (Jedi Master)",
+			"Darth Sidious (Sith Master)",
+			"Yoda (Force spirit teacher)",
+		],
+		apprentices: ["Ahsoka Tano (Padawan)", "Inquisitorius"],
+		formerAffiliations: [
+			"Jedi Order",
+			"Jedi High Council",
+			"Galactic Republic",
+		],
 	};
 
 	const score = compatibility(cha1, cha2);
 
 	return (
 		<>
-			<h1>Star Wars Love</h1>
-			<p>
-				{cha1.name} + {cha2.name} = <strong>{score}%</strong>
-			</p>
+			{cha1.name} + {cha2.name} = <strong>{score}%</strong>
 		</>
 	);
 }

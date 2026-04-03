@@ -262,7 +262,7 @@ function compatibility(character1: Character, character2: Character) {
 		result += -15;
 	}
 
-	return result;
+	return Math.max(0, result);
 }
 
 export default compatibility;
