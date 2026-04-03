@@ -1,5 +1,10 @@
-import "./App.css";
 import compatibility from "./utils/compatibility";
+import InputSearch from "./components/InputSearch";
+import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+import Match from "./components/Match";
+import "./App.css";
 
 function App() {
 	const cha1 = {
@@ -69,10 +74,14 @@ function App() {
 	};
 
 	const score = compatibility(cha1, cha2);
-
 	return (
 		<>
+			<NavBar />
+			<Banner />
+			<InputSearch />
+			<Match />
 			{cha1.name} + {cha2.name} = <strong>{score}%</strong>
+			<Footer />
 		</>
 	);
 }
