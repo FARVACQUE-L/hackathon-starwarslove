@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* ligne principale */
@@ -23,28 +24,17 @@
 
 /* carte profil */
 .profile {
-    width: 180px;
-    height: 240px;
+    min-width: 220px;
+    min-height: 300px;
     border: 2px solid #ccc;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
-/* image */
-.profile img {
-    width: 120px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.profile p {
-    font-size: 14px;
-    text-align: center;
+.card-perso {
+    width: 220px;
 }
 
 /* centre */
