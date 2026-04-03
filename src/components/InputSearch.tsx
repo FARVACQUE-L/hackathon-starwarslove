@@ -26,7 +26,7 @@ function InputSearch() {
 		top: "100%",
 		left: "0%",
 		zIndex: 100,
-		display: isVisible ? "block" : "none", // conditionnel par rapport au usestate !
+		display: isVisible ? "flex" : "none", // conditionnel par rapport au usestate !
 	};
 
 	// input
@@ -64,7 +64,7 @@ function InputSearch() {
 		//htmlFor à la place de for, parce qu'on est en JSX et for est un terme JS.... comme class --> className
 		<div className="input-container">
 			<label htmlFor="character" className="character-search">
-				Sélectionnez votre personnage :{" "}
+				Selectionnez votre personnage :{" "}
 			</label>
 			<input
 				id="character1"
