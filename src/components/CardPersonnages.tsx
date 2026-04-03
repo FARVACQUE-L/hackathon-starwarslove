@@ -1,4 +1,4 @@
-import "./CardPerso.css";
+import "./CardPersonnages.css";
 
 export type StarWarsCharacter = {
 	id: number;

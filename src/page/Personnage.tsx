@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import CardPerso, { type StarWarsCharacter } from "../components/CardPerso";
+import CardPerso, {
+	type StarWarsCharacter,
+} from "../components/CardPersonnages";
 import "./Personnage.css";
 
 function Personnage() {
