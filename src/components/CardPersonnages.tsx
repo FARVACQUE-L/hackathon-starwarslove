@@ -35,14 +35,14 @@ function CardPerso({ character }: Props) {
 	const affiliation = character.affiliation || character.affiliations?.[0] || "Inconnu";
 
 	return (
-		<article className="card-perso">
+		<article className="card-personnages">
 			<img
 				src={character.image}
 				alt={character.name}
-				className="card-perso__image"
+				className="card-personnages__image"
 			/>
 
-			<div className="card-perso__content">
+			<div className="card-personnages__content">
 				<h2>{character.name}</h2>
 				<p>
 					<strong>Espèce:</strong> {character.species || "Inconnu"}

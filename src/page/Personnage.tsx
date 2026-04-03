@@ -3,8 +3,14 @@ import CardPerso, {
 	type StarWarsCharacter,
 } from "../components/CardPersonnages";
 import "./Personnage.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
-function Personnage() {
+type PersonnageProps = {
+	onBack?: () => void;
+};
+
+function Personnage({ onBack }: PersonnageProps) {
 	const [characters, setCharacters] = useState<StarWarsCharacter[]>([]);
 	const [search, setSearch] = useState("");
 	const normalizedSearch = search.toLowerCase();
@@ -29,6 +35,8 @@ function Personnage() {
 
 	return (
 		<main className="personnage-page">
+			<NavBar onTitleClick={onBack} />
+
 			<section className="personnage-container">
 				<h1 className="personnage-title">Choisis ton personnage Star Wars !</h1>
 
@@ -51,6 +59,7 @@ function Personnage() {
 				{filteredCharacters.length === 0 && (
 					<p className="personnage-empty">Aucun personnage trouvé.</p>
 				)}
+				<Footer />
 			</section>
 		</main>
 	);

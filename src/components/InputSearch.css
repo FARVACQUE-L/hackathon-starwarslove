@@ -1,10 +1,23 @@
 @import url("https://fonts.cdnfonts.com/css/star-wars");
 
+:root {
+	--blue-color : rgb(114, 181, 252);
+	--red-color : #ff0037b7;
+}
+
+.left {
+	--main-color : var(--blue-color);
+}
+
+.right {
+	--main-color : var(--red-color);
+}
+
 .input-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: left;
+	align-items: center;
 	gap: 15px;
 	position: relative;
 	width: 20vw;
@@ -12,12 +25,12 @@
 }
 
 .character-search {
-	color: rgb(114, 181, 252);
+	color: var(--main-color);
 	font-family: "Star Wars", sans-serif;
 	text-align: left;
 	vertical-align: center;
 	background-color: rgb(45, 44, 44);
-	box-shadow: 0px 0px 15px rgb(114, 181, 252);
+	box-shadow: 0px 0px 15px var(--main-color);
 	border-radius: 15%;
 	width: 80%;
 	font-size: 0.8rem;
@@ -29,14 +42,14 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	color: rgb(114, 181, 252);
+	color: var(--main-color);
 	font-family: "Star Wars", sans-serif;
 	font-size: 0.8rem;
 	text-align: left;
 	vertical-align: center;
 	gap: 5px;
 	background-color: rgb(45, 44, 44);
-	box-shadow: 0px 0px 15px rgb(114, 181, 252);
+	box-shadow: 0px 0px 15px var(--main-color);
 	border-radius: 5%;
 	width: 80%;
 	max-height: 30vh;

@@ -1,4 +1,8 @@
 import type Character from "../types/Character";
+import love from "../assets/Coeur_de_sabres_lumineux.png"
+import friend from "../assets/friendship.png"
+import ennemies from "../assets/et.png"
+
 
 const affiliationLight = [
 	// Jedi & République
@@ -263,6 +267,13 @@ function compatibility(character1: Character, character2: Character) {
 	}
 
 	return Math.max(0, result);
+}
+
+export function getImageFromScore(score: number) {
+	console.log
+  if (score >= 75) return love;
+  if (score >= 35) return friend;
+  else return ennemies;
 }
 
 export default compatibility;

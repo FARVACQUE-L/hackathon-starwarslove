@@ -40,6 +40,10 @@
 /* centre */
 .center {
     font-size: 40px;
+
+    img {
+        width: 300px;
+    }
 }
 
 /* bouton random */
@@ -98,4 +102,43 @@
 .match-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #00aaff, 0 0 40px #ff2d2d;
+}
+
+
+/* Update symmetrie */
+
+.left {
+    .card-perso::before {
+        background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 300deg,
+            rgba(0, 184, 255, 0.95) 325deg,
+            rgba(255, 255, 255, 1) 340deg,
+            rgba(0, 184, 255, 0.95) 352deg,
+            transparent 360deg
+        );
+    }
+
+    .card-perso__content h2 {
+        color: #00aaff;
+    }
+}
+
+.right {
+    .card-perso::before {
+        background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 300deg,
+            rgba(255, 0, 0, 0.95) 325deg,
+            rgba(255, 255, 255, 1) 340deg,
+            rgba(255, 0, 0, 0.95) 352deg,
+            transparent 360deg
+        );
+    }
+
+    .card-perso__content h2 {
+        color: #ff0000;
+    }
 }
