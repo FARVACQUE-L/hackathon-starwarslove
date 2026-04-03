@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Force Match
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="src/assets/logoChickenBlue.png">
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<!-- Version en Anglais -->
+<details>
+<summary> 🇬🇧 English version</summary>
 
-## React Compiler
+### <u>Summary</u> : 
+<a href="#Description"> Description and Organization</a> <br>
+<a href="#Install"> Install the project </a> <br>
+<a href="#Thanks"> Special Thanks </a> <br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## <div id="Description">Description and Organization</div>
+## <div id="Install">Install the project</div>
 
-## Expanding the ESLint configuration
+```
+git clone git@github.com:FARVACQUE-L/hackathon-starwarslove.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+cd hackathon-starwarslove
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## <div id="Thanks">Special Thanks</div>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Special Thanks to wooloo !
+</details>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+<!-- Version en Francais -->
+<details open>
+<summary> 🇫🇷 Version française</summary>
+
+### <u>Sommaire</u> : 
+<a href="#Description"> Description et organisation</a> <br>
+<a href="#Installer"> Installer/ Executer le projet </a> <br>
+<a href="#Remerciment"> Remerciment </a> <br>
+
+## <div id="Description">Description et organisation</div>
+## <div id="Installer">Installer le projet</div>
+
 ```
+git clone git@github.com:FARVACQUE-L/hackathon-starwarslove.git
+
+cd hackathon-starwarslove
+
+npm install
+
+npm run dev
+```
+
+## <div id="Remerciment">Remerciment</div>
+
+Grand merci à moumouton
+</details>
+
+<img src="src/assets/logoChickenRed.png">
