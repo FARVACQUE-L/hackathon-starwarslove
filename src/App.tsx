@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Match from "./components/Match";
 import "./App.css";
+import Personnage from "./page/Personnage";
 
 function App() {
 	const cha1 = {
@@ -81,6 +82,7 @@ function App() {
 			<InputSearch />
 			<Match />
 			{cha1.name} + {cha2.name} = <strong>{score}%</strong>
+			<Personnage />
 			<Footer />
 		</>
 	);

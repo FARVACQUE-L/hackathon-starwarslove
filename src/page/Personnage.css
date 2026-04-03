@@ -1,0 +1,81 @@
+.personnage-page {
+	min-height: 100vh;
+	background-image: url("../assets/3d-hyperspace-background-with-warp-tunnel-effect.jpg");
+	background-size: 50%;
+	display: block;
+	padding: 36px;
+}
+
+.personnage-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	border: none;
+	border-radius: 12px;
+	padding: 24px;
+}
+
+.personnage-title {
+	margin-top: 0;
+	margin-bottom: 60px;
+	color: #ffe9ee;
+	font-family: "Star Wars", sans-serif;
+	font-size: 60px;
+	line-height: 1.25;
+	-webkit-text-stroke: 1.6px #ff0037;
+	text-shadow:
+		0 0 6px rgba(255, 0, 55, 0.95),
+		0 0 14px rgba(255, 0, 55, 0.8),
+		0 0 28px rgba(255, 0, 55, 0.6);
+}
+
+.personnage-container p {
+	color: white;
+}
+
+.personnage-search-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 95px;
+}
+
+.personnage-search {
+	width: min(100%, 520px);
+	padding: 12px 16px;
+	border-radius: 10px;
+	border: 2px solid rgba(0, 184, 255, 0.75);
+	background: rgba(4, 14, 40, 0.8);
+	color: #eaf8ff;
+	font-size: 1rem;
+	outline: none;
+}
+
+.personnage-search::placeholder {
+	color: rgba(234, 248, 255, 0.7);
+}
+
+.personnage-search:focus {
+	box-shadow:
+		0 0 6px rgba(0, 184, 255, 0.95),
+		0 0 14px rgba(0, 184, 255, 0.8);
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+	justify-content: center;
+	gap: 70px 96px;
+	align-items: stretch;
+	grid-auto-rows: 1fr;
+}
+
+.cards-grid.is-searching {
+	grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
+	gap: 56px 40px;
+}
+
+.personnage-empty {
+	margin-top: 28px;
+	font-size: 1.05rem;
+}

@@ -1,0 +1,118 @@
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+
+.card-perso {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: transparent;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	color: white;
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+	isolation: isolate;
+	padding: 5px;
+}
+
+.card-perso::before {
+	content: "";
+	position: absolute;
+	inset: -200%;
+	background: conic-gradient(
+		from 0deg,
+		transparent 0deg,
+		transparent 300deg,
+		rgba(0, 184, 255, 0.95) 325deg,
+		rgba(255, 255, 255, 1) 340deg,
+		rgba(0, 184, 255, 0.95) 352deg,
+		transparent 360deg
+	);
+	animation: border-spin 6s linear infinite;
+	filter: blur(100px);
+	z-index: 1;
+}
+
+.card-perso::after {
+	content: "";
+	position: absolute;
+	inset: 5px;
+	border-radius: 13px;
+	background: linear-gradient(
+		160deg,
+		rgba(4, 14, 40, 0.9),
+		rgba(20, 2, 18, 0.88)
+	);
+	z-index: 1;
+}
+
+.card-perso:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 34px rgba(0, 0, 0, 0.55);
+}
+
+.card-perso:hover::before {
+	animation-duration: 2.5s;
+}
+
+.card-perso__image {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	height: 280px;
+	border-radius: 10px;
+	object-fit: cover;
+	object-position: center 20%;
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-perso__content {
+	position: relative;
+	z-index: 2;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 18px;
+	text-align: left;
+}
+
+.card-perso__content h2 {
+	margin: 0 0 14px;
+	color: #ff0037b7;
+	font-size: 1.35rem;
+	line-height: 1.2;
+	min-height: 3.2rem;
+}
+
+.card-perso__content p {
+	margin: 10px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	font-size: 0.95rem;
+}
+
+.card-perso__content p:last-child {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+.card-perso__content strong {
+	color: #7ecbff;
+	margin-right: 6px;
+}
+
+@keyframes border-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
